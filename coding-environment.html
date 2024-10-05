@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Environment</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+            border-radius: 4px;
+        }
+
+        /* Main Content */
+        .main-section {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        /* Coding Environment Container */
+        .coding-environment {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Code Editor Container */
+        .editor-container {
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Language Selector */
+        .language-selector {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .language-selector select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        /* Code Editor */
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            font-size: 16px;
+            font-family: monospace;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            color: #333;
+            line-height: 1.5;
+            resize: none;
+        }
+
+        /* Button Container */
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-container button:hover {
+            background-color: #45a049;
+        }
+
+        /* Output Section */
+        .output-section {
+            margin-top: 30px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .output-section h3 {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .output-section pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #333;
+            font-family: monospace;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="coding-environment.html">Coding Environment</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-section">
+        <h1>Coding Environment</h1>
+
+        <!-- Coding Environment Container -->
+        <div class="coding-environment">
+            <!-- Code Editor Container -->
+            <div class="editor-container">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <label for="language">Select Language:</label>
+                    <select id="language">
+                        <option value="c">C</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                    </select>
+                </div>
+
+                <!-- Code Editor -->
+                <textarea id="code-editor" placeholder="Write your code here..."></textarea>
+
+                <!-- Buttons -->
+                <div class="button-container">
+                    <button id="run-code">Run Code</button>
+                    <button id="submit-code">Submit</button>
+                    <button id="delete-code">Delete Code</button> <!-- Nút Delete Code -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Output Section -->
+        <div class="output-section">
+            <h3>Output:</h3>
+            <pre id="output">Output will appear here after running the code...</pre>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Programming Learning Platform. All Rights Reserved.
+    </footer>
+
+    <script>
+        // JavaScript cho các chức năng
+
+        // Run code button
+        document.getElementById('run-code').addEventListener('click', function() {
+            // Mô phỏng việc chạy mã và hiển thị kết quả
+            document.getElementById('output').innerText = "Code executed successfully!";
+        });
+
+        // Submit code button
+        document.getElementById('submit-code').addEventListener('click', function() {
+            // Mô phỏng việc nộp bài
+            alert("Code submitted for grading!");
+        });
+
+        // Delete code button
+        document.getElementById('delete-code').addEventListener('click', function() {
+            // Xóa toàn bộ nội dung trong trình chỉnh sửa mã
+            document.getElementById('code-editor').value = "";
+            document.getElementById('output').innerText = "Code has been deleted.";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar Style */
+        .navbar {
+            background-color: #4CAF50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+            border-radius: 4px;
+        }
+
+        /* Main Section Style */
+        .main-section {
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 36px;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .filter-bar select, .filter-bar input {
+            padding: 10px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        /* Card container for exercises */
+        .cards-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        /* Style for each card */
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .card .status {
+            font-weight: bold;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        .card a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .card a:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="coding-environment.html">Coding Environment</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-section">
+        <h1>Dashboard</h1>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <select name="language-filter">
+                <option value="all">All Languages</option>
+                <option value="c">C</option>
+                <option value="python">Python</option>
+                <option value="java">Java</option>
+            </select>
+            <input type="text" placeholder="Search exercises..." />
+        </div>
+
+        <!-- Cards Container -->
+        <div class="cards-container">
+            <!-- Exercise 1 -->
+            <div class="card">
+                <h3>Sorting Algorithm</h3>
+                <p>Language: C</p>
+                <p>Difficulty: Medium</p>
+                <p class="status">Not Started</p>
+                <a href="/exercise-details.html">View Details</a>
+            </div>
+
+            <!-- Exercise 2 -->
+            <div class="card">
+                <h3>String Manipulation</h3>
+                <p>Language: Python</p>
+                <p>Difficulty: Easy</p>
+                <p class="status">In Progress</p>
+                <a href="/exercise-details.html">View Details</a>
+            </div>
+
+            <!-- Exercise 3 -->
+            <div class="card">
+                <h3>Binary Search</h3>
+                <p>Language: Java</p>
+                <p>Difficulty: Hard</p>
+                <p class="status">Completed</p>
+                <a href="/exercise-details.html">View Details</a>
+            </div>
+
+            <!-- Exercise 4 -->
+            <div class="card">
+                <h3>Recursion Basics</h3>
+                <p>Language: Python</p>
+                <p>Difficulty: Medium</p>
+                <p class="status">Not Started</p>
+                <a href="/exercise-details.html">View Details</a>
+            </div>
+
+            <!-- Exercise 5 -->
+            <div class="card">
+                <h3>Data Structures</h3>
+                <p>Language: C</p>
+                <p>Difficulty: Hard</p>
+                <p class="status">In Progress</p>
+                <a href="/exercise-details.html">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Programming Learning Platform. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
